@@ -5,17 +5,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <H1>Self Care Center</H1>
+    <div class = "main ">
+      <H1 class = "whiteText">Self Care Center</H1>
       <div>
-        <H2>Which type of message?</H2>
-        <div>
+        <H2 class = "whiteText">Which type of message?</H2>
+        <div class = "divBoxStyle menu">
           <!--Form with affirmation montra,  and recieve message button-->
+          <form id = "formId">
+            <input type = "radio" id = "montra" name = "selection" value = "true">
+            <label for= "montra">Montra</label>
 
-          <button  type="submit"  id = "receiveMessageButton">Receive Message</button>
+            <input type="radio" id="affirm" name="selection" value="true">
+            <label for="affirm">Affirmation</label>
+            <br>
+            <button type="submit" id="receiveMessageButton">Receive Message</button>
+            <button type="submit" id="resetButton">Reset</button>
+          </form>
         </div>
-      </div>
-      <div id = "messageBox">
+      </div></br></br>
+
+
+      <div id = "messageBox" class = "divBoxStyle output">
           <!--This will be where the message is posted-->
           <img src="assets/meditate.svg" width= "200" height = "300"><img>
       </div>

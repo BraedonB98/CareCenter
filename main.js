@@ -30,24 +30,34 @@ var Mantras =
 "Onward and upward.",
 "I am the sky, the rest is weather."];//15 items
 
+var form = document.getElementById("formId");
+
 function getRandomInt(max){
     return Math.floor(Math.random() * max);
 }
 
 function submitClick()
 {
+    console.log(event);
+    event.preventDefault();
     var box = document.getElementById("messageBox");
-    console.log("here");
-    var selection = 0;
-    if(selection==0){
-        box.innerHTML = Affirm[getRandomInt(13)];//ISSUE WITH THIS LINE ------------------------------------------------------------------------------------
+    var affirmBox = document.getElementById("affirm");
+
+    console.log("affirmation " + affirmBox.checked)
+    if(affirmBox.checked){
+        box.innerHTML = Affirm[getRandomInt(13)];
     }
-    else{
+    else{ // YES I KNOW THIS MEANS YOU GET A MONTRA BY DEFALUT IF THE USER DOESNT SELECT ONE. I could also check "montraBox.checked as a else if but considered this to be fine"
         box.innerHTML = Mantras[getRandomInt(15)];
     }
 }
 
-document.querySelector("#receiveMessageButton").addEventListener("click", function(event) {
-    submitClick();
+function resetClick()
+{
     event.preventDefault();
-}, false);
+    var box = document.getElementById("messageBox");
+    box.innerHTML = "<img src=\"assets/meditate.svg\" width= \"200\" height = \"300\"><img>";
+}
+
+document.querySelector("#receiveMessageButton").addEventListener("click", submitClick);
+document.querySelector("#resetButton").addEventListener("click", resetClick);
