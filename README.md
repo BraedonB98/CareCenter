@@ -28,8 +28,7 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 Make sure you're utilizing git best practices (branches) and commiting frequently. 
 
 ### Day One Deliverable
-- Read the spec sheet closely. 
-- Send the link to your forked repo to your Instructor
+- Read the spec
 
 Reflect on the the following questions in a DM to your Instructor:
 - What are my strengths as a developer? With which module concepts do I feel comfortable?
